@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* #region: Global */
+    :root {
+        --color-primary-black: #353535;
+        --color-second-black: #505050;
+        --color-third-black: #484546;
+        --color-fourth-black: #201F1F;
+        --color-gray: #9A9A9A;
+        --color-second-gray: #EAEAEA;
+        --color-white: #ffffff;
+        --color-black: #000000;
+        --color-primary-blue: #104394;
+        --color-primary-red: #E93125;
+    }
+    body {
+        font-family: "Public Sans", sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        margin-bottom: 0!important;
+    }
+    a, a:hover {
+        text-decoration: none!important;
+    }
+    .form-control:focus, .form-select:focus, .form-check-input:focus {
+        box-shadow: none!important;
+        outline: none!important;
+        border-color: var(--color-second-gray);
+    }
+    .form .error-message {
+        color: var(--color-primary-red);
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+    .form .asterisk {
+        color: var(--color-primary-red);
+        margin-left: 3px;
+    }
+    .textarea {
+        height: initial!important;
+    }
+    ::placeholder {
+        color: var(--color-gray)!important;
+    }
+    ::-webkit-input-placeholder {
+        color: var(--color-gray)!important;
+    }
+    ::-ms-input-placeholder {
+        color: var(--color-gray)!important;
+    }
+/* #endregion */
