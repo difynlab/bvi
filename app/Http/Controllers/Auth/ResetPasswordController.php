@@ -13,11 +13,11 @@ class ResetPasswordController extends Controller
 {
     public function index($email, $token)
     {
-        // $reset_password = PasswordResetToken::where('email', $email)->orderBy('created_at', 'desc')->first();
+        $reset_password = PasswordResetToken::where('email', $email)->orderBy('created_at', 'desc')->first();
 
-        // if(!$reset_password || $reset_password->token !== $token) {
-        //     abort(404);
-        // }
+        if(!$reset_password || $reset_password->token !== $token) {
+            abort(404);
+        }
 
         return view('auth.reset-password', [
             'email' => $email,

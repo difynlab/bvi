@@ -34,6 +34,7 @@ class RegisterController extends Controller
 
         $data = $request->except('password_confirmation');
         $data['password'] = Hash::make($request->password);
+        $data['role'] = 'member';
         $user = User::create($data);
 
         $mail = [
@@ -47,6 +48,6 @@ class RegisterController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->route('dashboard');
+        return redirect()->route('member.dashboard');
     }
 }

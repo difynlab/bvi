@@ -36,11 +36,8 @@ class AuthenticationController extends Controller
             if($user->role == 'admin') {
                 return redirect()->route('admin.dashboard');
             }
-            else if($user->role == 'partner') {
-                return redirect()->route('partner.dashboard');
-            }
             else {
-                return redirect()->route('explorer.dashboard');
+                return redirect()->route('member.dashboard');
             }
         }
 

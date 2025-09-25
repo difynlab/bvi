@@ -13,6 +13,7 @@
         --color-black: #000000;
         --color-primary-blue: #104394;
         --color-primary-red: #E93125;
+        --color-primary-green: #388E3C;
     }
     body {
         font-family: "Public Sans", sans-serif;
@@ -49,5 +50,126 @@
     }
     ::-ms-input-placeholder {
         color: var(--color-gray)!important;
+    }
+/* #endregion */
+
+
+/* #region: Notification */
+    .notification-modal {
+        text-align: center;
+        z-index: 99999;
+    }
+    .notification-modal .modal-body {
+        padding: 30px;
+    }
+    .notification-modal .notification-title {
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        color: var(--color-primary-black);
+    }
+    .notification-modal .notification-description {
+        font-size: 16px;
+        color: var(--color-second-black);
+    }
+    .notification-modal .tick-icon {
+        font-size: 35px;
+        color: var(--color-primary-green);
+    }
+    .notification-modal .close-icon {
+        font-size: 35px;
+        color: var(--color-primary-red);
+    }
+    .notification-modal .triangle-icon {
+        font-size: 35px;
+        color: var(--color-primary-red);
+    }
+    .notification-modal .close-button {
+        border: 1px solid var(--color-second-gray);
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-primary-black);
+        margin-top: 25px;
+        transition: all 0.3s;
+        &:hover {
+            background-color: var(--color-fourth-black);
+            border-color: var(--color-fourth-black);
+            color: var(--color-white);
+            transition: all 0.3s;
+        }
+    }
+    .notification-modal .buttons {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .notification-modal .cancel-button {
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        color: var(--color-primary-black);
+        transition: all 0.3s;
+        &:hover {
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+    }
+    .notification-modal .modal-delete-button {
+        background-color: var(--color-primary-red);
+        border: 1px solid var(--color-primary-red);
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        color: var(--color-white);
+        width: 200px;
+        height: 60px;
+        transition: all 0.3s;
+        &:hover {
+            background-color: var(--color-fourth-black);
+            border-color: var(--color-fourth-black);
+            transition: all 0.3s;
+        }
+    }
+    .notification-modal .modal-delete-button .delete-icon {
+        padding-right: 5px;
+    }
+/* #endregion */
+
+
+/* #region: Responsive */
+    @media (width < 768px) {
+        .notification-modal .modal-body {
+            padding: 20px;
+        }
+        .notification-modal .tick-icon {
+            font-size: 30px;
+        }
+        .notification-modal .notification-title {
+            font-size: 20px;
+            padding-bottom: 5px;
+        }
+        .notification-modal .notification-description {
+            font-size: 14px;
+        }
+        .notification-modal .close-button {
+            font-size: 13px;
+            margin-top: 15px;
+        }
+        .notification-modal .buttons {
+            margin-top: 15px;
+            gap: 15px;
+        }
+        .notification-modal .cancel-button {
+            font-size: 13px;
+        }
+        .notification-modal .modal-delete-button {
+            font-size: 13px;
+            width: 160px;
+            height: 45px;
+        }
     }
 /* #endregion */

@@ -11,7 +11,14 @@ class RedirectIfAuthenticatedMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(Auth::check()) {
-            return redirect()->route('dashboard');
+            $role = Auth::user()->role;
+
+            if($role == 'admin') {
+                return redirect()->route('admin.dashboard');
+            }
+            else {
+                return redirect()->route('member.dashboard');
+            }
         }
 
         return $next($request);
