@@ -84,9 +84,9 @@
         padding-left: 18px;
         transition: all 0.3s;
     }
-    /* .fr-wrapper > div:first-of-type {
+    .fr-wrapper > div:first-of-type {
         display: none!important;
-    } */
+    }
     .line-clamp-1, .line-clamp-2, .line-clamp-3, .line-clamp-4, .line-clamp-5 {
         overflow: hidden;
         display: -webkit-box;
