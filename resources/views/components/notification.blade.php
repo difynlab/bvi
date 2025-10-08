@@ -39,6 +39,10 @@
         <script>
             $(document).ready(function() {
                 $('#error-modal').modal('show');
+
+                $('#error-modal').on('hidden.bs.modal', function () {
+                    $('.data-modal').modal('show');
+                });
             });
         </script>
     @endif

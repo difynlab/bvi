@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* #region: Import - Completed */
+    @import url("./sidebar.css");
+    @import url("./page.css");
+/* #endregion */
 
-/* #region: Global */
+
+/* #region: Global - Completed */
     :root {
         --color-primary-black: #353535;
         --color-second-black: #505050;
@@ -14,6 +19,9 @@
         --color-primary-blue: #104394;
         --color-primary-red: #E93125;
         --color-primary-green: #388E3C;
+        --color-line: #464646;
+        --color-border: #E3E3E3;
+        --color-edit: #F3F4F6;
     }
     body {
         font-family: "Public Sans", sans-serif;
@@ -33,7 +41,7 @@
         color: var(--color-primary-red);
         font-weight: 500;
         font-size: 14px;
-        margin-top: 2px;
+        margin-top: 5px;
     }
     .form .asterisk {
         color: var(--color-primary-red);
@@ -51,10 +59,58 @@
     ::-ms-input-placeholder {
         color: var(--color-gray)!important;
     }
+    .navbar-fluid {
+        position: fixed;
+        width: 100%;
+        z-index: 11;
+    }
+    .navbar-fluid .sidebar-icon {
+        position: absolute;
+        top: 5px;
+        left: 30px;
+        display: block;
+        color: var(--color-black);
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 19999;
+    }
+    .layout-content {
+        padding-top: 45px;
+        padding-left: 330px;
+        padding-right: 30px;
+        transition: all 0.3s;
+    }
+    .layout-content.full-width {
+        padding-left: 18px;
+        transition: all 0.3s;
+    }
+    /* .fr-wrapper > div:first-of-type {
+        display: none!important;
+    } */
+    .line-clamp-1, .line-clamp-2, .line-clamp-3, .line-clamp-4, .line-clamp-5 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    .line-clamp-1 {
+        -webkit-line-clamp: 1;
+    }
+    .line-clamp-2 {
+        -webkit-line-clamp: 2;
+    }
+    .line-clamp-3 {
+        -webkit-line-clamp: 3;
+    }
+    .line-clamp-4 {
+        -webkit-line-clamp: 4;
+    }
+    .line-clamp-5 {
+        -webkit-line-clamp: 5;
+    }
 /* #endregion */
 
 
-/* #region: Notification */
+/* #region: Notification - Completed */
     .notification-modal {
         text-align: center;
         z-index: 99999;
@@ -141,6 +197,33 @@
 
 
 /* #region: Responsive */
+    @media (width < 1921px) {}
+    @media (width < 1901px) {}
+    @media (width < 1851px) {}
+    @media (width < 1801px) {}
+    @media (width < 1751px) {}
+    @media (width < 1681px) {}
+    @media (width < 1601px) {}
+    @media (width < 1537px) {}
+    @media (width < 1441px) {}
+    @media (width < 1401px) {}
+    @media (width < 1367px) {}
+    @media (width < 1301px) {}
+    @media (width < 1281px) {
+        .layout-content {
+            padding-left: 275px;
+            padding-right: 18px;
+        }
+        .layout-content.full-width {
+            padding-left: 18px;
+        }
+    }
+    @media (width < 1201px) {}
+    @media (width < 1151px) {}
+    @media (width < 1076px) {}
+    @media (width < 1025px) {}
+    @media (width < 992px) {}
+    @media (width < 845px) {}
     @media (width < 768px) {
         .notification-modal .modal-body {
             padding: 20px;
@@ -172,4 +255,24 @@
             height: 45px;
         }
     }
+    @media (width < 721px) {}
+    @media (width < 576px) {
+        .layout-content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .layout-content.full-width {
+            padding-left: 0;
+        }
+        .navbar-fluid .sidebar-icon {
+            left: 15px;
+        }
+    }
+    @media (width < 481px) {}
+    @media (width < 429px) {}
+    @media (width < 415px) {}
+    @media (width < 396px) {}
+    @media (width < 377px) {}
+    @media (width < 361px) {}
+    @media (width < 331px) {}
 /* #endregion */

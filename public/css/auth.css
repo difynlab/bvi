@@ -1,4 +1,4 @@
-/* #region: Global */
+/* #region: Global - Completed */
     .page-auth {
         align-items: center;
         height: 100vh;
@@ -104,7 +104,7 @@
 /* #endregion */
 
 
-/* #region: Login */
+/* #region: Login - Completed */
     .login .remember {
         font-size: 13px;
         color: var(--color-gray);
