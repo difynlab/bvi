@@ -115,7 +115,7 @@
                 success: function(data) {
                     $('#form').attr('action', updateURL);
                     $('#title').val(data.title);
-                    $('#short_description').val(data.title);
+                    $('#short_description').val(data.short_description);
                     $('#category').val(data.category);
 
                     const date = document.getElementById('date');
@@ -133,6 +133,7 @@
                     $('#end_time').val(data.end_time).trigger('change');
                     $('#repeat').val(data.repeat);
                     $('#location').val(data.location);
+                    $('input[name="old_thumbnail"]').val(data.thumbnail);
                     $('input[name="status"][value="' + data.status + '"]').prop('checked', true);
 
                     // Initialize editors

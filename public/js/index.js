@@ -1,9 +1,12 @@
+let editors = [];
+
 $(document).ready(function() {
     const moduleRoutes = window.moduleRoutes || {};
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-    let editors = [];
     $('.add-button').on('click', function() {
+        editors = [];
+
         $('.form')[0].reset();
 
         $('#modal').one('shown.bs.modal', function () {
@@ -94,7 +97,8 @@ $(document).ready(function() {
 
 // #region: Initialize Froala editors //
     function initializeEditors(data, csrfToken) {
-        let editors = [];
+        editors = [];
+
         document.querySelectorAll('.editor').forEach(element => {
             let editorInstance = new FroalaEditor(element, {
                 imageUploadURL: '/admin/froala/upload',
